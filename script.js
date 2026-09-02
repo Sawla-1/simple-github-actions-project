@@ -1,18 +1,23 @@
 /// Pure functions (easily testable with CI/CD scripts)
-export function formatGreeting(name) {
+function formatGreeting(name) {
   if (!name || name.trim() === "") {
     return "Hello, Developer!";
   }
   return `Hello, ${name.trim()}! Welcome to GitHub Actions.`;
 }
 
-export function calculateSum(a, b) {
+function calculateSum(a, b) {
   const numA = Number(a);
   const numB = Number(b);
   if (isNaN(numA) || isNaN(numB)) {
     throw new Error("Invalid numbers provided");
   }
   return numA + numB;
+}
+
+// Export for Node.js test environments
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { formatGreeting, calculateSum };
 }
 
 // DOM Event Listeners (runs only in the browser)
