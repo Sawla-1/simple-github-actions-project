@@ -1,12 +1,12 @@
 /// Pure functions (easily testable with CI/CD scripts)
-function formatGreeting(name) {
+export function formatGreeting(name) {
   if (!name || name.trim() === "") {
     return "Hello, Developer!";
   }
   return `Hello, ${name.trim()}! Welcome to GitHub Actions.`;
 }
 
-function calculateSum(a, b) {
+export function calculateSum(a, b) {
   const numA = Number(a);
   const numB = Number(b);
   if (isNaN(numA) || isNaN(numB)) {
