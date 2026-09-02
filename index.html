@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Actions Practice App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 GitHub Actions Practice</h1>
+    <p class="subtitle">A simple interactive web app for CI/CD training.</p>
+    
+    <!-- Interactive Greeting Section -->
+    <div class="section">
+      <h2>1. Interactive Greeting</h2>
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button id="greetBtn">Say Hello</button>
+      <p id="greetMessage" class="output-text"></p>
+    </div>
+    
+    <!-- Math Helper Section -->
+    <div class="section">
+      <h2>2. Quick Calculator</h2>
+      <div class="calc-row">
+        <input type="number" id="numA" placeholder="Number A" value="10">
+        <span class="operator">+</span>
+        <input type="number" id="numB" placeholder="Number B" value="5">
+      </div>
+      <button id="calcBtn">Calculate Total</button>
+      <p id="calcResult" class="output-text"></p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
