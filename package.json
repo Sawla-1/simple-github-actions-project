@@ -1,0 +1,19 @@
+{
+
+  "name": "simple-github-actions-project",
+
+  "version": "1.0.0",
+
+  "description": "Beginner web app tested with GitHub Actions",
+
+  "main": "script.js",
+
+  "scripts": {
+
+    "test": "node test.js"
+
+  },
+
+  "devDependencies": {}
+
+}

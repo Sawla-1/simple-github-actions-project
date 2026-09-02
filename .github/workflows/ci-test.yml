@@ -1,0 +1,24 @@
+name: JavaScript CI Tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-javascript-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Print Node and NPM versions
+        run: |
+          node -v
+          npm -v
+      - name: Run JavaScript Unit Tests
+        run: npm test
