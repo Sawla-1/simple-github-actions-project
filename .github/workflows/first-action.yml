@@ -1,0 +1,19 @@
+name: My First GitHub Action
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  welcome-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
+      - name: Display Runner Information
+        run: |
+          echo "Operating System: Linux Ubuntu"
+          echo "Date and Time: $(date)"
+      - name: Display Repository Context
+        run: echo "Workflow running on repository ${{ github.repository }}"
